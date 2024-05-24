@@ -15,8 +15,7 @@
     "SablierV2LockupTranched",
     "SablierV2NFTDescriptor",
   ]
-  optimizer = true
-  optimizer_runs = 1000
+  optimizer = false
   out = "out"
   script = "script"
   sender = "0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38"
@@ -42,7 +41,6 @@
 [profile.optimized]
   out = "out-optimized"
   test = "test/mocks"
-  via_ir = true
 
 # See "SMTChecker and Formal Verification" in the Solidity docs
 [profile.smt]
@@ -52,7 +50,6 @@
   out = "out-optimized"
   script = "src"
   test = "src"
-  via_ir = true
 
 [profile.smt.model_checker]
   engine = "chc" # constrained Horn clauses
